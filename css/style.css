@@ -309,6 +309,7 @@ figure {
 }
 .footer-contacts a {
   color: #ffffff;
+  display: block;
 }
 .footer-contacts a:hover {
   text-decoration: none;
