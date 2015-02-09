@@ -1,0 +1,598 @@
+/*===================================
+=            $Содержание            =
+===================================*/
+/**
+*
+* Содержание
+* Общие стили
+* Header
+* Главная
+* Footer
+**/
+
+// .sprite { background: url('sprite.png') no-repeat top left; width: 12px; height: 16px;  }
+// .sprite.icon-pass { background-position: 0 0; width: 15px; height: 17px; }
+// .sprite.icon-user { background-position: -45px 0; width: 15px; height: 15px; }
+// .sprite.icon-inst-black { background-position: -90px 0; width: 21px; height: 21px; }
+// .sprite.icon-inst-white { background-position: -141px 0; width: 21px; height: 21px; }
+// .sprite.icon-fb-black { background-position: -192px 0; height: 22px; }
+// .sprite.icon-fb-white { background-position: -234px 0; height: 22px; }
+// .sprite.icon-vk-black { background-position: -276px 0; width: 25px; }
+// .sprite.icon-vk-white { background-position: -331px 0; width: 25px; }
+// .sprite.icon-cross-black { background-position: -386px 0; height: 12px; }
+// .sprite.icon-login-grey { background-position: -428px 0; width: 18px; }
+// .sprite.icon-login-white { background-position: -476px 0; width: 18px; }
+
+
+/*====================================
+=            $Общие стили            =
+====================================*/
+
+
+body {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 960px;
+}
+
+.body-index {
+    color: #ffffff;
+    background: #070707 url("../img/bg-index-body.jpg") no-repeat center top;
+}
+
+.body-inner {
+    color: #000000;
+    background: #f8f5f2;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 33px;
+    margin-right: 16px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background: #663d15;
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+        &:hover {
+            background: #000000;
+        }
+    }
+}
+
+/*-----  End of $Общие стили  ------*/
+
+
+
+
+/*===============================
+=            $Header            =
+===============================*/
+
+.main-header {
+    margin-bottom: 60px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.main-navigation {
+    float: left;
+    width: 780px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+    }
+
+    li{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    a {
+        display: block;
+        padding: 25px 20px;
+        text-decoration: none;
+        color: #ffffff;
+        &:hover,
+        &:active {
+            background-color: #242424;
+        }
+    }
+}
+
+.main-navigation .active a {
+    position: relative;
+}
+
+.main-navigation .active a:hover {
+    background: none;
+}
+
+.main-navigation .active a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 4px;
+    background: #ffffff;
+}
+
+.user-block {
+    float: right;
+    max-width: 140px;
+}
+
+    .login {
+        position: relative;
+
+        display: inline-block;
+        vertical-align: top;
+        padding: 25px 20px;
+        padding-left: 50px;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .login:before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        background: transparent url("../img/sprite.png") no-repeat;
+        background-position: -476px 0;
+        top: 27px;
+        left: 20px;
+    }
+
+        .login:hover,
+        .login:active {
+            background-color: #242424;
+        }
+
+        .login:hover:before {
+            opacity: 0.3;
+        }
+
+/*-----  End of $Header  ------*/
+
+
+
+
+
+/*================================
+=            $Главная            =
+================================*/
+
+.main-container {
+    margin: 30px auto;
+}
+
+.logo {
+    width: 368px;
+    height: 204px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+    .logo img {
+        width: 368px;
+        height: 204px;
+    }
+
+.features-row {
+    margin-bottom: 80px;
+}
+
+    .features-item {
+        float: left;
+        width: 300px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .features-item:last-child {
+        margin-right: 0;
+    }
+
+        .features-title {
+            position: relative;
+            padding-bottom: 50px;
+            margin-bottom: 30px;
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        .features-title:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            bottom: 0%;
+            left: 50%;
+            margin-left: -10px;
+            transform: rotate(45deg);
+        }
+
+        .features-item p {
+            margin: 10px;
+        }
+
+.index-content {
+    margin-bottom: 35px;
+    padding: 50px 80px;
+    background: url("../img/bg-index-content-shadow.png") no-repeat center,
+                #f8f5f2 url("../img/bg-index-content.jpg") repeat;
+    color: #000000;
+
+}
+
+    .content-column-left {
+        float: left;
+        width: 350px;
+    }
+
+    .content-column-right {
+        float: right;
+        width: 300px;
+    }
+
+        .content-column-title {
+            margin: 0;
+            margin-bottom: 35px;
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        .news-preview {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .news-preview li {
+                margin-bottom: 25px;
+            }
+
+            .news-preview time {
+                text-transform: none;
+                font-weight: normal;
+            }
+
+    .gallery {
+        height: 260px;
+        position: relative;
+    }
+
+        .gallery-content {
+            height: 164px;
+            margin: 0;
+            border: 7px solid #ffffff;
+            background: #cccccc;
+        }
+
+            .gallery-content img {
+                width: 286px;
+                height: 164px;
+            }
+
+            .gallery .btn {
+                width: 140px;
+                margin: 0;
+                position: absolute;
+                bottom: 0;
+            }
+
+            .gallery-prev {
+                left: 0;
+            }
+
+            .gallery-next {
+                right: 0;
+            }
+
+    .index-content p {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    .appointment-form input {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 106px;
+        padding: 10px 15px;
+        border: 2px solid #000000;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        color: #000000;
+        background: #f9f6f3;
+        outline: none;
+    }
+
+    .appointment-form input:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .appointment-form input:focus {
+        border: 2px solid #663d15;
+    }
+
+
+    .appointment-form .btn {
+        clear: both;
+        width: 100%;
+    }
+
+
+/*-----  End of $Главная  ------*/
+
+
+/*===============================
+=            $Footer            =
+===============================*/
+
+.main-footer {
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: #232323 url("../img/bg-footer.jpg") repeat;
+    color: #ffffff;
+}
+
+.footer-contacts {
+    float: left;
+    width: 320px;
+    margin-right: 80px;
+
+    a {
+        color: #ffffff;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+
+.footer-social {
+    float: left;
+    text-align: center;
+}
+
+    .footer-social p {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .social-btn {
+        margin: 0 2px;
+        display: inline-block;
+        vertical-align: top;
+        width: 43px;
+        height: 43px;
+        font-size: 0;
+        text-decoration: none;
+        background: #000000 url("../img/sprite.png") no-repeat;
+    }
+
+    .social-btn:hover {
+        background-color: #ffffff;
+    }
+
+        .social-btn-vk {
+            background-position: -322px 12px;
+        }
+
+        .social-btn-fb {
+            background-position: -220px 10px;
+        }
+
+        .social-btn-inst {
+            background-position: -129px 10px;
+        }
+
+        .social-btn-vk:hover {
+            background-position: -268px 12px;
+        }
+
+        .social-btn-fb:hover {
+            background-position: -177px 10px;
+        }
+
+        .social-btn-inst:hover {
+            background-position: -78px 10px;
+        }
+
+
+.footer-copyright {
+    float: right;
+    max-width: 320px;
+}
+
+    .footer-copyright p {
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-copyright .btn {
+        margin-right: 0;
+    }
+
+    .footer-copyright .btn:hover {
+        color: #000000;
+        background: #ffffff;
+    }
+
+/*-----  End of $Footer  ------*/
+
+
+
+
+
+
+/*===================================
+=            $Прайс-лист            =
+===================================*/
+
+.breadcrumbs li{
+    display: inline-block;
+}
+
+.info-content {
+    margin-bottom: 40px;
+}
+
+.info-content:last-child {
+    margin-bottom: 0;
+}
+
+.info-content-left,
+.info-content-right {
+    width: 470px;
+    float: left;
+
+    /* для оформления */
+    min-height: 210px;
+}
+
+.heading {
+    /* для оформления */
+    min-height: 150px;
+}
+
+/*-----  End of $Прайс-лист  ------*/
+
+
+
+/* для каталога */
+.catalog-filter {
+    /* display: inline-block; */
+    float: left;
+    width: 220px;
+}
+
+/* -для оформления- */
+.catalog-filter label{
+    display: block;
+}
+
+.catalog-products {
+    float: right;
+    width: 700px;
+    font-size: 0;
+}
+
+.catalog-product {
+    font-size: 14px;
+    display: inline-block;
+    width: 210px;
+    vertical-align: top;
+}
+
+.catalog-product-photo {
+    width: 200px;
+    height: 130px;
+}
+
+.catalog-product-heading a {
+    display: block;
+}
+
+.catalog-product-price{
+    display: inline-block;
+}
+
+.catalog-pagination {
+    display: block;
+    font-size: 14px;
+}
+
+.catalog-pagination li{
+    display: inline-block;
+}
+
+
+/* item */
+.product-photos {
+    float: left;
+    width: 500px;
+    font-size: 0px;
+}
+
+.main-product-photo {
+    margin: 10px;
+}
+
+.additional-product-photo {
+    display: inline-block;
+    width: 150px;
+    margin: 10px 5px;
+}
+
+.product-info {
+    float: right;
+    width: 420px;
+}
+
+.product-price {
+    display: inline-block;
+}
+
+.product-model {
+    float: right;
+}
+
+.product-stock-status
+{
+    display: inline-block;
+}
